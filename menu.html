@@ -1,0 +1,265 @@
+<div class="logo">Habesha Delivery & Restaurant</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Order</a>
+            <a href="#footer">Contact</a>
+            <a href="login.html">Login</a>
+            <select>
+                <option lang="en">English</option>
+                <option lang="am-ET">Amharic</option>
+                <option lang="öm-ET">Afaan Oromo</option>
+                <option lang="ti-ET">Tigrinya</option>
+                <option lang="so-ET">Somali</option>
+            </select>
+        </nav>
+        <div class="cart-btn" onclick="openCart()">
+            🛒 Cart (<span id="cart-count">0</span>)
+        </div>
+<link rel="stylesheet" href="menu.css">
+<div class="container" id="menu">
+        <h2 class="section-title">Todays Menu</h2>
+        <div style="text-align: center; margin-bottom: 25px;">
+    <input type="text" id="searchInput" onkeyup="filterMenu()" placeholder="Search for food or drinks..." style="padding: 10px 15px; width: 80%; max-width: 400px; border: 1px solid #ccc; border-radius: 20px; font-size: 16px;">
+</div>
+        <div class="menu-grid">
+            
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Fresh green salad with lettuce, tomatoes, cucumbers, and herbs served in a bowl on a clean table, bright and refreshing.">
+                <div class="menu-info">
+                    <h3>Special Salad</h3>
+                    <div class="price">350 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Special Salad')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="A juicy cheeseburger with melted cheese, lettuce, and tomato on a sesame bun, served with a warm restaurant style presentation.">
+                <div class="menu-info">
+                    <h3>Cheese Burger</h3>
+                    <div class="price">600 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Cheese Burger')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80" alt="A large pepperoni pizza with bubbling cheese and crust, sitting on a wooden table in a cozy casual dining setting.">
+                <div class="menu-info">
+                    <h3>Pizza</h3>
+                    <div class="price">850 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Pizza')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=500&q=80" alt="Tender grilled meat pieces with vegetables and sauce served in a hot skillet, rich and savory.">
+                <div class="menu-info">
+                    <h3>Special Tibs</h3>
+                    <div class="price">750 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Special Tibs')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="download.jpg" alt="Crispy chicken burger with lettuce and sauce on a toasted bun, served in a casual café setting.">
+                <div class="menu-info">
+                    <h3>Chicken Burger</h3>
+                    <div class="price">900 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Chicken Burger')">Add to Cart</button>
+                </div>
+            </div>
+                 <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=500&q=80" alt="Traditional Ethiopian breakfast platter with injera, eggs, and vegetables, arranged on a colorful table for a warm home style meal.">
+                <div class="menu-info">
+                    <h3>special Habesha Breakfast</h3>
+                    <div class="price">450 Birr</div>
+                    <button class="order-btn" onclick="addToCart('special Habesha Breakfast')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=500&q=80" alt="A tall glass of fresh fruit juice with vibrant orange color and ice, placed on a bright table in a relaxed café.">
+                <div class="menu-info">
+                    <h3>Juice</h3>
+                    <div class="price">200 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Juice')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="A vegetable pizza with peppers, mushrooms, olives, and cheese, baked golden and served on a rustic table.">
+                <div class="menu-info">
+                    <h3>Veggie Pizza</h3>
+                    <div class="price">700 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Veggie Pizza')">Add to Cart</button>
+                </div>
+            </div>
+<div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=500&q=80" alt="Creamy pasta topped with sauce and herbs, served in a white bowl with a cozy restaurant atmosphere.">
+                <div class="menu-info">
+                    <h3>Special Pasta</h3>
+                    <div class="price">400 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Special Pasta')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=500&q=80" alt="Traditional doro wat with chicken, spicy sauce, and injera, presented as a rich Ethiopian comfort meal.">
+                <div class="menu-info">
+                    <h3>Special Doro Wat</h3>
+                    <div class="price">1,200 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Special Doro Wat')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="A layered chocolate cake with frosting and toppings, placed on a plate in a warm dessert setting.">
+                <div class="menu-info">
+                    <h3>Chocolate Cake</h3>
+                    <div class="price">250 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Chocolate Cake')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80" alt="A small cup of traditional Ethiopian coffee with foam and a dark roasted aroma, set on a simple table.">
+                <div class="menu-info">
+                    <h3>Habesha Coffee</h3>
+                    <div class="price">80 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Habesha Coffee')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="download (1).jpg" alt="A bowl of shiro stew with thick sauce and vegetables, served with injera for a comforting meal.">
+                <div class="menu-info">
+                    <h3>Special Shiro</h3>
+                    <div class="price">300 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Special Shiro')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="Minced beef kitfo served with a spicy butter topping and injera, presented as a rich Ethiopian specialty.">
+                <div class="menu-info">
+                    <h3>Special Kitfo</h3>
+                    <div class="price">850 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Special Kitfo')">Add to Cart</button>
+                </div>
+            </div>
+               <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=500&q=80" alt="Golden fried potato sticks piled high in a basket, crisp and savory in a casual diner setting.">
+                <div class="menu-info">
+                    <h3>French Fries</h3>
+                    <div class="price">200 Birr</div>
+                    <button class="order-btn" onclick="addToCart('French Fries')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=500&q=80" alt="A chilled soda drink in a glass with ice, refreshing in a bright restaurant setting.">
+                <div class="menu-info">
+                    <h3>Sodas</h3>
+                    <div class="price">60 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Sodas')">Add to Cart</button>
+                </div>
+            </div>
+                 
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80" alt="A colorful fasting platter with vegetables, lentils, and flavorful side dishes served on injera, lively and wholesome.">
+                <div class="menu-info">
+                    <h3>Fasting beyayinet</h3>
+                    <div class="price">350 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Fasting beyayinet')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=500&q=80" alt="A warm bowl of lentil stew with a creamy texture and Ethiopian spices, served with bread in a simple meal setting.">
+                <div class="menu-info">
+                    <h3>Shiro</h3>
+                    <div class="price">280 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Shiro')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="A hearty mixed meat dish with vegetables and rich sauce, served in a savory Ethiopian restaurant presentation.">
+                <div class="menu-info">
+                    <h3>Special Dulet</h3>
+                    <div class="price">500 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Special Dulet')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=500&q=80" alt="A creamy avocado and mango smoothie in a tall glass with fruit slices and ice, bright and refreshing.">
+                <div class="menu-info">
+                    <h3>Avocado and mango smoothie</h3>
+                    <div class="price">180 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Avocado and mango smoothie')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=500&q=80" alt="Tender grilled chicken pieces with spices and peppers served hot in a skillet, savory and appetizing.">
+                <div class="menu-info">
+                    <h3>Special Doro Tibs</h3>
+                    <div class="price">800 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Special Doro Tibs')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" alt="Crispy fried fish fillets with lemon and side vegetables, served on a plate in a casual dining setting.">
+                <div class="menu-info">
+                    <h3>Fish Fry</h3>
+                    <div class="price">550 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Fish Fry')">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=500&q=80" alt="A colorful bowl of mixed fruits with berries, melon, and citrus, fresh and vibrant on a clean table.">
+                <div class="menu-info">
+                    <h3>Fruit Salad</h3>
+                    <div class="price">220 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Fruit Salad')">Add to Cart</button>
+                </div>
+            </div>
+                  <div class="menu-card">
+                <img src="data:image/webp;base64,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" alt="Scoops of creamy ice cream in a cone or bowl with soft pastel colors, cheerful and sweet.">
+                <div class="menu-info">
+                    <h3>Ice Cream</h3>
+                    <div class="price">150 Birr</div>
+                    <button class="order-btn" onclick="addToCart('Ice Cream')">Add to Cart</button>
+                </div>
+                
+            </div>
+        </div>
+        <script>
+        let cartCount = 0;
+
+        function addToCart(foodName) {
+            cartCount++;
+            document.getElementById('cart-count').innerText = cartCount;
+            alert(foodName + " has been added to your cart! 🛵");
+        }
+
+        function openCart() {
+            alert("You have " + cartCount + " items in your cart. Please fill out the delivery form below to place your order.");
+        }
+        function filterMenu() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.getElementsByClassName('menu-card');
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+        if (title.includes(input)) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+       
+    </script>
